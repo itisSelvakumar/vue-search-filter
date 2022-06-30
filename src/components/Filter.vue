@@ -63,7 +63,10 @@ export default {
       return this.filterProductsByRange(this.filterProductsByName(this.filterProductsByCategory(this.products)))
     }
   },
-        
+
+  /**
+   * Filter methods based on the filter values
+   */
   methods: {
     filterProductsByCategory: function(products){
       return products.filter(product => !product.category.indexOf(this.category))
